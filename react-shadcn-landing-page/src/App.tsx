@@ -1,15 +1,17 @@
 import './App.css'
-import { HeroVideoDialog } from './components/ui/hero-video-dialog'
-import Navbar from './components/ui/Navbar'
-import HeroTextSection from './components/HeroTextSection'
-import { BentoGridSection } from './components/BentoGridSection'
-import { AvatarCircles } from './components/ui/avatar-circles'
-import { OrbitingCircles } from './components/ui/orbiting-circles'
 import { cn } from './lib/utils'
+
+import Navbar from './components/ui/Navbar'
+import { HeroVideoDialog } from './components/ui/hero-video-dialog'
+import HeroTextSection from './components/HeroTextSection'
+import { Meteors } from './components/ui/meteors'
+
+import { BentoGridSection } from './components/BentoGridSection'
+import { OrbitingCircles } from './components/ui/orbiting-circles'
+import PricingSection from './components/ui/PricingSection'
+import { AvatarCircles } from './components/ui/avatar-circles'
 import { Marquee } from './components/ui/marquee'
 import Footer from './components/Footer'
-import { Meteors } from './components/ui/meteors'
-import PricingSection from './components/ui/PricingSection'
 
 // font-[Montserrat]
 
@@ -143,11 +145,11 @@ function App() {
   const firstRow = reviews.slice(0, reviews.length / 2)
   const secondRow = reviews.slice(reviews.length / 2)
 
-
   return (
 
     <div className="min-h-screen bg-background text-foreground">
 
+      {/* --- UPPER SECTION --- */}
       <section className="relative flex w-full flex-col items-center justify-center overflow-hidden">
 
         {/* Meteors */}
@@ -238,12 +240,12 @@ function App() {
           </div>
 
           {/* --- 2. THE ORBITING GALAXY --- */}
-          <div className="relative flex h-[500px] w-full items-center justify-center">
+          <div className="relative flex h-125 w-full items-center justify-center">
 
             {/* Central Core */}
             <div className="z-30 flex size-20 items-center justify-center rounded-full border-4 border-blue-500/10 bg-white shadow-[0_0_50px_-12px_rgba(59,130,246,0.5)] dark:bg-zinc-950 dark:border-blue-500/20">
 
-              <div className="flex size-14 items-center justify-center rounded-full bg-gradient-to-tr from-blue-600 to-cyan-400 text-white shadow-inner animate-pulse">
+              <div className="flex size-14 items-center justify-center rounded-full bg-linear-to-tr from-blue-600 to-cyan-400 text-white shadow-inner animate-pulse">
                 <i className="fa-solid fa-bolt text-2xl"></i>
               </div>
 
@@ -290,8 +292,8 @@ function App() {
             </OrbitingCircles>
 
             {/* Atmospheric Background Glows */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-purple-500/5 blur-[100px] rounded-full pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-75 h-75 bg-purple-500/5 blur-[100px] rounded-full pointer-events-none" />
           
           </div>
           

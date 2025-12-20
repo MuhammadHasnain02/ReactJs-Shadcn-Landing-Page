@@ -64,7 +64,7 @@ export const AvatarCircles = ({
 
         {/* Optional: Add text labels next to the circles like in your image */}
         <div className="flex items-center gap-2 text-zinc-500 dark:text-zinc-400">
-            <span className="h-4 w-[1px] bg-zinc-300 dark:bg-zinc-800 hidden md:block" />
+            <span className="h-4 w-px bg-zinc-300 dark:bg-zinc-800 hidden md:block" />
             <span className="text-sm font-medium">Active Users</span>
             <span className="rounded bg-orange-100 px-1.5 py-0.5 text-[10px] font-bold text-orange-600 dark:bg-orange-900/30">
                 NEW

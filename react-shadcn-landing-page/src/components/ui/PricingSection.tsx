@@ -77,7 +77,7 @@ const PricingSection = () => {
                         {/* Monthly Option (First for logical flow) */}
                         <button onClick={() => setIsYearly(false)}
                             className={cn(
-                                "relative z-10 px-8 py-2.5 text-sm font-bold cursor-pointer transition-all duration-300 rounded-full min-w-[140px]",
+                                "relative z-10 px-8 py-2.5 text-sm font-bold cursor-pointer transition-all duration-300 rounded-full min-w-35",
                                 !isYearly ? "text-white" : "text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300"
                             )}
                         >
@@ -87,7 +87,7 @@ const PricingSection = () => {
                         {/* Yearly Option */}
                         <button onClick={() => setIsYearly(true)}
                             className={cn(
-                                "relative z-10 px-8 py-2.5 text-sm font-bold cursor-pointer transition-all duration-300 rounded-full flex items-center justify-center gap-2 min-w-[160px]",
+                                "relative z-10 px-8 py-2.5 text-sm font-bold cursor-pointer transition-all duration-300 rounded-full flex items-center justify-center gap-2 min-w-40",
                                 isYearly ? "text-white" : "text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300"
                             )}
                         >
@@ -119,8 +119,8 @@ const PricingSection = () => {
                     className={cn(
                         "group relative flex flex-col p-8 rounded-3xl border transition-all duration-500 hover:shadow-2xl",
                         plan.popular 
-                        ? "bg-white dark:bg-zinc-900 border-blue-500 shadow-xl scale-105 z-20 min-h-[580px]" 
-                        : "bg-white/40 dark:bg-zinc-900/40 backdrop-blur-md border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 min-h-[540px]"
+                        ? "bg-white dark:bg-zinc-900 border-blue-500 shadow-xl scale-105 z-20 min-h-145" 
+                        : "bg-white/40 dark:bg-zinc-900/40 backdrop-blur-md border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 min-h-135"
                     )}>
 
                         {plan.popular && (
@@ -144,7 +144,7 @@ const PricingSection = () => {
                             <p className="text-[10px] text-zinc-400 mt-2 font-medium uppercase tracking-tighter">Billed {isYearly ? "annually" : "monthly"}</p>
                         </div>
 
-                        <div className="space-y-4 mb-8 flex-grow">
+                        <div className="space-y-4 mb-8 grow">
                             {plan.features.map((feature) => (
                             <div key={feature} className="flex items-center gap-3">
                                 <div className="flex size-5 items-center justify-center rounded-full bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400">
@@ -155,7 +155,7 @@ const PricingSection = () => {
                             ))}
                         </div>
 
-                        <Button className={cn("w-full rounded-2xl py-6 text-sm font-bold transition-all active:scale-95",
+                        <Button className={cn("w-full rounded-2xl py-6 text-sm font-bold cursor-pointer transition-all active:scale-95",
                             plan.popular 
                             ? "bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/25" 
                             : "bg-zinc-900 hover:bg-black text-white dark:bg-zinc-100 dark:hover:bg-white dark:text-zinc-950"

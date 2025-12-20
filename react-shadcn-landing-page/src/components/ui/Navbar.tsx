@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap } from "lucide-react";
 import { cn } from "@/lib/utils"; // Standard Shadcn utility
+import { ThemeSelect } from "../ThemeSelect";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +38,7 @@ const Navbar = () => {
             <div className="bg-blue-600 p-1.5 rounded-lg group-hover:rotate-12 transition-transform">
               <Zap className="h-5 w-5 text-white fill-white" />
             </div>
-            <span className="text-xl font-bold font-[Montserrat] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+            <span className="text-[19px] font-bold font-[Montserrat] tracking-[-0.6px] bg-clip-text text-transparent bg-linear-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
               ShadcnCraft
             </span>
 
@@ -47,6 +48,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-8">
 
             <div className="flex items-center gap-6">
+              
               {navLinks.map((link) => (
                 <a
                   key={link.name}
@@ -57,11 +59,15 @@ const Navbar = () => {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full" />
                 </a>
               ))}
+              
             </div>
             
             <div className="h-6 bg-gray-200 dark:bg-gray-800" />
             
-            <Button size="sm" className="rounded-full px-5 bg-blue-600 hover:bg-blue-700 text-white border-none shadow-lg shadow-blue-500/20">
+            {/* Shadcn Select Theme Toggle */}
+            <ThemeSelect />
+
+            <Button size="sm" className="rounded-full px-5 py-5 bg-blue-600 hover:bg-blue-700 text-white cursor-pointer border-none shadow-lg shadow-blue-500/20">
               Get Started
             </Button>
 
