@@ -16,15 +16,15 @@ export const AvatarCircles = ({
 }: AvatarCirclesProps) => {
   return (
 
-    <section className="flex w-full flex-col items-center justify-center px-4 bg-white dark:bg-zinc-950">
+    <section className="flex w-full flex-col items-center justify-center px-4 font-[Montserrat] bg-white dark:bg-zinc-950">
   
       {/* 1. "Last Updated" Style Badge */}
-      <div className="mb-6 rounded-full border border-orange-200 bg-orange-50/50 px-4 py-1.5 text-[13px] font-medium text-orange-700 dark:border-orange-900/30 dark:bg-orange-900/10 dark:text-orange-400">
+      <div className="mb-6 rounded-full border border-orange-200 bg-orange-50/50 px-4 py-1.5 text-[13px] font-semibold text-orange-700 dark:border-orange-900/30 dark:bg-orange-900/10 dark:text-orange-400">
         Trusted by 10k+ developers
       </div>
 
       {/* 2. Main Heading */}
-      <h2 className="text-center text-3xl md:text-[34px] font-[Montserrat] font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+      <h2 className="text-center text-3xl md:text-[34px] font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
         Built with industry-standard tools and best practices
       </h2>
 

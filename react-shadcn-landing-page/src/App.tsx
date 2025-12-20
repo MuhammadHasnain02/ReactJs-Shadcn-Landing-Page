@@ -9,6 +9,7 @@ import { cn } from './lib/utils'
 import { Marquee } from './components/ui/marquee'
 import Footer from './components/Footer'
 import { Meteors } from './components/ui/meteors'
+import PricingSection from './components/ui/PricingSection'
 
 // font-[Montserrat]
 
@@ -147,7 +148,7 @@ function App() {
 
     <div className="min-h-screen bg-background text-foreground">
 
-      <section className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
+      <section className="relative flex w-full flex-col items-center justify-center overflow-hidden">
 
         {/* Meteors */}
         <Meteors number={30} />
@@ -155,14 +156,14 @@ function App() {
         {/* Navbar */}
         <Navbar />
 
-        <div className='pt-32'>
-          {/* HeroTextSection */}
+        {/* HeroTextSection */}
+        <div className='pt-35'>
           <HeroTextSection />
         </div>
 
       </section>
 
-      <main className="py-16 px-4">
+      <main>
 
         {/* --- HERO VIDEO SECTION --- */}
         <section className="max-w-5xl mx-auto my-20 relative group">
@@ -215,38 +216,7 @@ function App() {
           </div>
         </section>
 
-        {/* --- Avatar Circles SECTION --- */}
-        <section className="py-10">
-          <AvatarCircles numPeople={99} avatarUrls={avatars} />
-        </section>
-
-        {/* --- Marquee SECTION --- */}
-        <div className="flex w-full py-20 flex-col items-center justify-center overflow-hidden">
-          
-          {/* First Row Items */}
-          <Marquee pauseOnHover className="[--duration:20s]">
-
-            {firstRow.map((review) => (
-              <ReviewCard key={review.username} {...review} />
-            ))}
-
-          </Marquee>
-
-          {/* Second Row Items */}
-          <Marquee reverse pauseOnHover className="[--duration:20s]">
-
-            {secondRow.map((review) => (
-              <ReviewCard key={review.username} {...review} />
-            ))}
-
-          </Marquee>
-
-          <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r"></div>
-          <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>
-        
-        </div>
-
-        {/* --- Avatar Circles SECTION --- */}
+        {/* --- Orbiting Circles galaxy (showing integrations and connectivity) SECTION --- */}
         <section className="relative flex w-full py-10 flex-col items-center justify-center overflow-hidden bg-white dark:bg-zinc-950">
   
           {/* --- 1. TOP BRANDING & HEADING --- */}
@@ -326,6 +296,40 @@ function App() {
           </div>
           
         </section>
+
+        {/* --- Avatar Circles SECTION --- */}
+        <PricingSection />
+
+        {/* --- Avatar Circles SECTION --- */}
+        <section className="py-10">
+          <AvatarCircles numPeople={99} avatarUrls={avatars} />
+        </section>
+
+        {/* --- Marquee SECTION --- */}
+        <div className="flex w-full py-20 flex-col items-center justify-center overflow-hidden">
+          
+          {/* First Row Items */}
+          <Marquee pauseOnHover className="[--duration:20s]">
+
+            {firstRow.map((review) => (
+              <ReviewCard key={review.username} {...review} />
+            ))}
+
+          </Marquee>
+
+          {/* Second Row Items */}
+          <Marquee reverse pauseOnHover className="[--duration:20s]">
+
+            {secondRow.map((review) => (
+              <ReviewCard key={review.username} {...review} />
+            ))}
+
+          </Marquee>
+
+          <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r"></div>
+          <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>
+        
+        </div>
 
       </main>
 
