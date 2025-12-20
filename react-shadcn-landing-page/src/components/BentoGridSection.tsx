@@ -1,6 +1,6 @@
 import React, { useRef } from "react"; // Added React and useRef
 import { cn } from "@/lib/utils";
-import { CalendarIcon, FileTextIcon, BellIcon, Share2Icon, icons } from "lucide-react";
+import { CalendarIcon, FileTextIcon, BellIcon, Share2Icon } from "lucide-react";
 
 import { Calendar } from "@/components/ui/calendar";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";

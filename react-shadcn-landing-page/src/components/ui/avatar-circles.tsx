@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils"
+// import { cn } from "@/lib/utils"
 
 interface Avatar {
   imageUrl: string
@@ -12,7 +12,6 @@ interface AvatarCirclesProps {
 
 export const AvatarCircles = ({
   numPeople,
-  className,
   avatarUrls,
 }: AvatarCirclesProps) => {
   return (

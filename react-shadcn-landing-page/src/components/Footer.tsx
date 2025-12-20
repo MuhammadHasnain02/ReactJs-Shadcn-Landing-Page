@@ -1,7 +1,6 @@
-import React from 'react'
+// import React from 'react'
 
 function Footer() {
-
 
     return (
          <footer className="w-full bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-900 pt-16 pb-8 px-6">
