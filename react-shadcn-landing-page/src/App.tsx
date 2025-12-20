@@ -12,6 +12,7 @@ import PricingSection from './components/ui/PricingSection'
 import { AvatarCircles } from './components/ui/avatar-circles'
 import { Marquee } from './components/ui/marquee'
 import Footer from './components/Footer'
+import { useScrollReveal } from './Hooks/useScrollReveal'
 
 // font-[Montserrat]
 
@@ -75,6 +76,8 @@ const ReviewCard = ({
 }
 
 function App() {
+
+  useScrollReveal(100);
 
   const avatars = [
     {
@@ -159,7 +162,7 @@ function App() {
         <Navbar />
 
         {/* HeroTextSection */}
-        <div className='pt-35'>
+        <div className='pt-35 scroll-animate'>
           <HeroTextSection />
         </div>
 
@@ -168,7 +171,7 @@ function App() {
       <main>
 
         {/* --- HERO VIDEO SECTION --- */}
-        <section className="max-w-5xl mx-auto my-20 relative group">
+        <section className="scroll-animate scroll-left max-w-5xl mx-auto my-20 relative group">
 
           {/* Decorative glow background */}
           <div className="absolute -inset-1 bg-linear-to-r from-blue-300 to-cyan-300 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
@@ -193,7 +196,7 @@ function App() {
         </section>
 
         {/* --- Binto Grid SECTION --- */}
-        <section className="max-w-7xl mx-auto py-20 bg-slate-50/50 dark:bg-zinc-900/20">
+        <section className="scroll-animate scroll-right max-w-7xl mx-auto py-20 bg-slate-50/50 dark:bg-zinc-900/20">
           <div className="max-w-7xl mx-auto">
             
             {/* Section Heading */}
@@ -219,7 +222,7 @@ function App() {
         </section>
 
         {/* --- Orbiting Circles galaxy (showing integrations and connectivity) SECTION --- */}
-        <section className="relative flex w-full py-10 flex-col items-center justify-center overflow-hidden bg-white dark:bg-zinc-950">
+        <section className="scroll-animate scroll-scale relative flex w-full py-10 flex-col items-center justify-center overflow-hidden bg-white dark:bg-zinc-950">
   
           {/* --- 1. TOP BRANDING & HEADING --- */}
           <div className="z-20 mb-16 flex flex-col items-center text-center font-[Montserrat]">
@@ -299,16 +302,18 @@ function App() {
           
         </section>
 
-        {/* --- Avatar Circles SECTION --- */}
-        <PricingSection />
+        {/* --- PRICING SECTION --- */}
+        <section className='scroll-animate scroll-left'>
+          <PricingSection />
+        </section>
 
         {/* --- Avatar Circles SECTION --- */}
-        <section className="py-10">
+        <section className="scroll-animate scroll-scale py-10">
           <AvatarCircles numPeople={99} avatarUrls={avatars} />
         </section>
 
         {/* --- Marquee SECTION --- */}
-        <div className="flex w-full py-20 flex-col items-center justify-center overflow-hidden">
+        <div className="scroll-animate scroll-scale flex w-full py-20 flex-col items-center justify-center overflow-hidden">
           
           {/* First Row Items */}
           <Marquee pauseOnHover className="[--duration:20s]">

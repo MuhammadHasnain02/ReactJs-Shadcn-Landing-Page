@@ -28,11 +28,11 @@ function HeroTextSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 
-                <Button size="lg" className="rounded-full px-8 text-lg h-12 shadow-xl shadow-blue-500/20">
-                    Get Started for free <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" className="rounded-full cursor-pointer px-8 text-lg h-12 shadow-xl shadow-blue-500/20">
+                    Get Started for free
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-full px-8 text-lg h-12">
-                    View Components
+                <Button variant="outline" size="lg" className="rounded-full cursor-pointer w-50 text-lg h-12">
+                    Learn More <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
 
             </div>

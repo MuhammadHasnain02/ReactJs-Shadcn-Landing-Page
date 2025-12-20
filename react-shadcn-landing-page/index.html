@@ -16,6 +16,38 @@
     <!-- Font Awesome Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
+    <style>
+      
+      /* Base hidden state */
+      .scroll-animate {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s cubic-bezier(0.21, 0.47, 0.32, 0.98);
+        visibility: hidden;
+      }
+
+      /* Visible state */
+      .scroll-animate.active {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+      }
+
+      /* Optional directions */
+      .scroll-left { transform: translateX(-40px); }
+      .scroll-right { transform: translateX(40px); }
+      .scroll-animate.active.scroll-left,
+      .scroll-animate.active.scroll-right { transform: translateX(0); }
+
+      /* Optional stagger */
+      .scroll-animate:nth-child(1) { transition-delay: 0.2s; }
+      .scroll-animate:nth-child(2) { transition-delay: 0.4s; }
+      .scroll-animate:nth-child(3) { transition-delay: 0.6s; }
+      .scroll-animate:nth-child(4) { transition-delay: 0.8s; }
+
+
+    </style>
+
   </head>
   <body>
     <div id="root"></div>
