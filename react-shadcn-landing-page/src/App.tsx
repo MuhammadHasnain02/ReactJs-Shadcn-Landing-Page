@@ -8,6 +8,7 @@ import { OrbitingCircles } from './components/ui/orbiting-circles'
 import { cn } from './lib/utils'
 import { Marquee } from './components/ui/marquee'
 import Footer from './components/Footer'
+import { Meteors } from './components/ui/meteors'
 
 // font-[Montserrat]
 
@@ -145,12 +146,23 @@ function App() {
   return (
 
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
 
-      <main className="pt-32 pb-16 px-4">
+      <section className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
 
-        {/* --- HERO TEXT SECTION --- */}
-        <HeroTextSection />
+        {/* Meteors */}
+        <Meteors number={30} />
+
+        {/* Navbar */}
+        <Navbar />
+
+        <div className='pt-32'>
+          {/* HeroTextSection */}
+          <HeroTextSection />
+        </div>
+
+      </section>
+
+      <main className="py-16 px-4">
 
         {/* --- HERO VIDEO SECTION --- */}
         <section className="max-w-5xl mx-auto my-20 relative group">

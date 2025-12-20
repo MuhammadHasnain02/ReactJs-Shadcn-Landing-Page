@@ -37,8 +37,8 @@ const Navbar = () => {
             <div className="bg-blue-600 p-1.5 rounded-lg group-hover:rotate-12 transition-transform">
               <Zap className="h-5 w-5 text-white fill-white" />
             </div>
-            <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
-              MagicUI
+            <span className="text-xl font-bold font-[Montserrat] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+              ShadcnCraft
             </span>
 
           </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
               ))}
             </div>
             
-            <div className="h-6 w-[1px] bg-gray-200 dark:bg-gray-800" />
+            <div className="h-6 bg-gray-200 dark:bg-gray-800" />
             
             <Button size="sm" className="rounded-full px-5 bg-blue-600 hover:bg-blue-700 text-white border-none shadow-lg shadow-blue-500/20">
               Get Started
@@ -101,6 +101,7 @@ const Navbar = () => {
             </Button>
           </div>
         </div>
+        
       </nav>
 
     </header>
